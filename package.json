@@ -1,0 +1,36 @@
+{
+  "name": "naive-ui-explore",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/Marcuslyj/naive-ui-explore.git",
+  "author": "marcus",
+  "license": "MIT",
+  "scripts": {
+    "test": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js"
+  },
+  "devDependencies": {
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.30.0",
+    "babel-loader": "^8.0.5",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "cross-env": "^5.2.0",
+    "karma": "^4.1.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "progress-bar-webpack-plugin": "^1.12.1",
+    "puppeteer": "^1.15.0",
+    "mocha": "^6.1.4",
+    "karma-webpack": "^3.0.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon-chai": "^2.0.2",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "chai": "^4.2.0",
+    "karma-spec-reporter": "0.0.32",
+    "karma-coverage": "^1.1.2",
+    "karma-chrome-launcher": "^2.2.0"
+  }
+}
