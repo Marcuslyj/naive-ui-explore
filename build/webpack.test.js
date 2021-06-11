@@ -1,7 +1,9 @@
 const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const config = require('./config')
 
+const { alias } = config;
 
 const webpackConfig = {
     mode: 'development',
@@ -16,13 +18,7 @@ const webpackConfig = {
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
-        alias: Object.assign({
-            main: path.resolve(__dirname, '../src'),
-            packages: path.resolve(__dirname, '../packages'),
-            examples: path.resolve(__dirname, '../examples')
-        }, {
-            'vue$': 'vue/dist/vue.common.js'  // 这是？会import到vue$?
-        }),
+        alias,
         modules: ['node_modules'] // 告诉 webpack 解析模块时应该搜索的目录
     },
     module: {
