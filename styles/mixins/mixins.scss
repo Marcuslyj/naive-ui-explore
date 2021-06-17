@@ -4,6 +4,6 @@
   $B: $namespace + "-" + $block;
 
   .#{$B} {
-    @content;
+    @content; // 内容插入标记位
   }
 }
