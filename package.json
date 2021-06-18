@@ -6,7 +6,8 @@
   "author": "marcus",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
+    "demo": "cross-env NODE_ENV=development & gulp --gulpfile build/gulpfile.js build & webpack-dev-server --config build/webpack.demo.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "test": "cross-env NODE_ENV=development karma start test/unit/karma.conf.js"
   },
   "devDependencies": {
@@ -43,7 +44,11 @@
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
     "ionicons": "^4.5.8"

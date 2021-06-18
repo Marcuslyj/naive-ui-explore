@@ -6,9 +6,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const webpackConfig = {
   mode: 'development',
-  entry: './demo/indexUsingCss.js', // 路径？
+  entry: './demo/index.js',
   output: {
-    path: path.resolve(process.cwd(),),
+    path: path.resolve(process.cwd(), ),
     publicPath: '',
     filename: '[name].[hash:7].js',
     chunkFilename: '[name].[hash:7].js'
@@ -28,7 +28,7 @@ const webpackConfig = {
     hints: false
   },
   stats: {
-    children: false // ？
+    children: false
   },
   module: {
     rules: [
@@ -49,7 +49,7 @@ const webpackConfig = {
           'sass-loader'
         ]
       },
-      {
+       {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
         loader: 'url-loader',
         query: {
@@ -62,19 +62,17 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './demo/index.tpl', // 路径？
-      // The file to write the HTML to
-      filename: './index.html' // 路径？
+      template: './demo/index.tpl',
+      filename: './index.html'
     }),
     new VueLoaderPlugin(),
-    // 这个需要吗？
-    // new webpack.LoaderOptionsPlugin({
-    //   vue: {
-    //     compilerOptions: {
-    //       preserveWhitespace: false
-    //     }
-    //   }
-    // })
+    new webpack.LoaderOptionsPlugin({
+      vue: {
+        compilerOptions: {
+          preserveWhitespace: false
+        }
+      }
+    })
   ]
 }
 

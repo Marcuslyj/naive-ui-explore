@@ -1,5 +1,6 @@
 @import './mixins/mixins.scss';
 
+// 为什么是全局引用的样式
 @include b(card) {
   .mask {
     overflow: hidden;
