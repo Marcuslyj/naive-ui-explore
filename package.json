@@ -6,6 +6,7 @@
   "author": "marcus",
   "license": "MIT",
   "scripts": {
+    "build": "",
     "demo": "cross-env NODE_ENV=development & gulp --gulpfile build/gulpfile.js build & webpack-dev-server --config build/webpack.demo.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "test": "cross-env NODE_ENV=development karma start test/unit/karma.conf.js"
