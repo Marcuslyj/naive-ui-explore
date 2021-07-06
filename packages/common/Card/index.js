@@ -5,4 +5,3 @@ Card.install = function (Vue) {
 }
 
 export default Card
-// so，插件就是实现了install方法

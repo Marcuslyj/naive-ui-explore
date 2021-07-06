@@ -1,11 +1,32 @@
-import Vue from 'vue'
+import Vue from 'vue/dist/vue'
+import VueRouter from 'vue-router'
 import '../styles/index.scss'
-// import '../dist/lib/index.css'
 import Demo from './demo.vue'
-import Card from 'packages/Card'
-import Icon from 'packages/Icon'
+import Card from 'packages/common/Card'
+import Icon from 'packages/common/Icon'
+import SideMenu from 'packages/nimbus/SideMenu'
+import Layout from 'packages/nimbus/Layout'
 
-Card.install(Vue)
-Icon.install(Vue)
+import sideMenuDemo from './components/sideMenuDemo'
 
-;(new Vue(Demo)).$mount('#app')
+Vue.use(VueRouter)
+
+// 全局插件组件
+const pligins = [Card, Icon, SideMenu, Layout]
+pligins.forEach((plugin) => plugin.install(Vue))
+
+const routes = [
+    { path: '/sidemenu', component: sideMenuDemo }
+]
+
+const router = new VueRouter({
+    routes
+})
+
+
+
+    ; (new Vue({
+        router
+    })).$mount('#app')
+
+console.log('...')
