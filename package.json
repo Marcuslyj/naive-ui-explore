@@ -53,7 +53,9 @@
     "gulp-sass": "^4.0.2",
     "@vue/babel-preset-app": "^3.8.0",
     "jsdom": "^15.1.1",
-    "karma-jsdom-launcher": "^7.1.0"
+    "karma-jsdom-launcher": "^7.1.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "eslint": "^5.16.0"
   },
   "dependencies": {
     "ionicons": "^4.5.8"

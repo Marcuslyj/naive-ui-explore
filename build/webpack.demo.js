@@ -2,13 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 const config = require('./config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const webpackConfig = {
   mode: 'development',
   entry: './demo/indexUsingCss.js', // 路径？
   output: {
-    path: path.resolve(process.cwd(),),
+    path: path.resolve(process.cwd()),
     publicPath: '',
     filename: '[name].[hash:7].js',
     chunkFilename: '[name].[hash:7].js'
@@ -66,7 +66,7 @@ const webpackConfig = {
       // The file to write the HTML to
       filename: './index.html' // 路径？
     }),
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
     // 这个需要吗？
     // new webpack.LoaderOptionsPlugin({
     //   vue: {

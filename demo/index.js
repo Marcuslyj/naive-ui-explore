@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue'
 import VueRouter from 'vue-router'
 import '../styles/index.scss'
-import Demo from './demo.vue'
+// import Demo from './demo.vue'
 import Card from 'packages/common/Card'
 import Icon from 'packages/common/Icon'
 import Loader from 'packages/common/Loader'
@@ -24,18 +24,16 @@ Loader.install(Vue)
 Home.install(Vue)
 
 const routes = [
-    { path: '/sidemenu', component: sideMenuDemo },
-    { path: '/', component: homeDemo }
+  { path: '/sidemenu', component: sideMenuDemo },
+  { path: '/', component: homeDemo }
 ]
 
 const router = new VueRouter({
-    routes
+  routes
 })
 
-
-
     ; (new Vue({
-        router
-    })).$mount('#app')
+  router
+})).$mount('#app')
 
 console.log('...')
