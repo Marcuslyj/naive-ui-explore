@@ -1,10 +1,6 @@
 // Karma configuration
 const webpackConfig = require('../../build/webpack.test')
 
-// returns: A path where Puppeteer expects to find bundled Chromium. 
-// Chromium might not exist there if the download was skipped with PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
-process.env.CHROME_BIN = require('puppeteer').executablePath()
-
 module.exports = function (config) {
     config.set({
 
@@ -64,7 +60,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['ChromeHeadless'],
+        browsers: ['jsdom'],
 
 
         // Continuous Integration mode

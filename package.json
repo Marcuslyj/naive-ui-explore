@@ -10,7 +10,7 @@
     "demo": "cross-env NODE_ENV=development & gulp --gulpfile build/gulpfile.js build & webpack-dev-server --config build/webpack.demo.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "serve": "npm run dev",
-    "test": "cross-env NODE_ENV=development karma start test/unit/karma.conf.js"
+    "test": "cross-env NODE_ENV=development BABEL_ENV=test karma start test/unit/karma.conf.js"
   },
   "devDependencies": {
     "vue": "^2.6.10",
@@ -50,7 +50,10 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cssmin": "^0.2.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "@vue/babel-preset-app": "^3.8.0",
+    "jsdom": "^15.1.1",
+    "karma-jsdom-launcher": "^7.1.0"
   },
   "dependencies": {
     "ionicons": "^4.5.8"
