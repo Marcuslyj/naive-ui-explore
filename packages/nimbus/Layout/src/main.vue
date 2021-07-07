@@ -1,33 +1,45 @@
 <template>
   <div class="layout">
-    <div class="body" :class="{ collapse: collapse, active: !collapse }">
+    <div
+      class="body"
+      :class="{ collapse: collapse, active: !collapse }"
+    >
       <div class="header">
         <span class="content">
           Service Management
         </span>
       </div>
-      <nv-loader></nv-loader>
+      <nv-loader />
     </div>
-    <div class="menu" :class="{ collapse: collapse, active: !collapse }">
+    <div
+      class="menu"
+      :class="{ collapse: collapse, active: !collapse }"
+    >
       <div class="header">
         <div class="content">
           <div class="icon">
-            <nv-icon type="md-settings" :size="22"></nv-icon>
+            <nv-icon
+              type="md-settings"
+              :size="22"
+            />
           </div>
           Administration
         </div>
       </div>
       <div
-        class="item"
-        :class="{ active: activeItemName === item.name }"
         v-for="item in items"
         :key="item.name"
+        class="item"
+        :class="{ active: activeItemName === item.name }"
         @click="setActive(item.name)"
       >
         <span>{{ item.name }}</span>
       </div>
-      <div class="toggle-button" @click="toggle">
-        <img src="./toggleButton.svg" />
+      <div
+        class="toggle-button"
+        @click="toggle"
+      >
+        <img src="./toggleButton.svg">
       </div>
     </div>
   </div>
@@ -35,34 +47,34 @@
 
 <script>
 export default {
-  name: "NvLayout",
+  name: 'NvLayout',
   props: {},
-  methods: {
-    toggle() {
-      this.collapse = !this.collapse;
-    },
-    setActive(itemName) {
-      this.activeItemName = itemName;
-    },
-  },
-  data() {
+  data () {
     return {
       collapse: false,
-      activeItemName: "Service Management",
+      activeItemName: 'Service Management',
       items: [
         {
-          name: "Service Management",
+          name: 'Service Management'
         },
         {
-          name: "Service Type Management",
+          name: 'Service Type Management'
         },
         {
-          name: "User Management",
-        },
-      ],
-    };
+          name: 'User Management'
+        }
+      ]
+    }
   },
-};
+  methods: {
+    toggle () {
+      this.collapse = !this.collapse
+    },
+    setActive (itemName) {
+      this.activeItemName = itemName
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

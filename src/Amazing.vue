@@ -4,14 +4,14 @@
 
 <script>
 export default {
-  name: "amazing",
-  props: ["title"],
+  name: 'Amazing',
+  props: ['title'],
   methods: {
-    hello() {
-      console.log("amazing");
-    },
-  },
-};
+    hello () {
+      console.log('amazing')
+    }
+  }
+}
 </script>
 
 <style></style>

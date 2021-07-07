@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nv-layout></nv-layout>
+    <nv-layout />
   </div>
 </template>
 
