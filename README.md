@@ -5,3 +5,9 @@ If you want to run eslint from the command line, make sure you include the .vue 
 example:
 eslint --ext .js,.vue src
 eslint "src/**/*.{js,vue}"
+
+# develop
+```
+npm run dev
+```
+@port 8086
