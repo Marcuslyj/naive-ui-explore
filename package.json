@@ -10,7 +10,8 @@
     "demo": "cross-env NODE_ENV=development & gulp --gulpfile build/gulpfile.js build & webpack-dev-server --config build/webpack.demo.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "serve": "npm run dev",
-    "test": "cross-env NODE_ENV=development BABEL_ENV=test karma start test/unit/karma.conf.js"
+    "test": "cross-env NODE_ENV=development BABEL_ENV=test karma start test/unit/karma.conf.js",
+    "eslint": "eslint --ext .js,.vue ../naive-ui-explore --fix"
   },
   "devDependencies": {
     "vue": "^2.6.10",
@@ -56,7 +57,8 @@
     "karma-jsdom-launcher": "^7.1.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.2"
+    "eslint-plugin-vue": "^5.2.2",
+    "masonry-layout": "^4.2.2"
   },
   "dependencies": {
     "ionicons": "^4.5.8"

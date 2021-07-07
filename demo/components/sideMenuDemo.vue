@@ -1,6 +1,11 @@
 <template>
-  <div class="container">
-    <nv-layout />
+  <div>
+    <div class="service-container">
+      <nv-service-layout />
+    </div>
+    <div class="nav-container">
+      <nv-navbar />
+    </div>
   </div>
 </template>
 
@@ -11,11 +16,20 @@ export default {
 </script>
 
 <style>
-.container {
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #1f263e;
+}
+.service-container {
   position: absolute;
   top: 50px;
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #171D33;
 }
 </style>
