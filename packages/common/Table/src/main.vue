@@ -1,5 +1,5 @@
 <template>
-  <div class="nv-table">
+  <div class="n-table">
     <table>
       <thead>
         <slot name="header">
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'NvTable'
+  name: 'NTable'
 }
 </script>
 

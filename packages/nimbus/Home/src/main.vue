@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'NvHome',
+  name: 'NHome',
   props: {},
   data () {
     return {
